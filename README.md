@@ -13,3 +13,11 @@ The database consists of 3 main tables with Foreign Key (`FOREIGN KEY`) relation
 * **`gafanhoto_assiste_curso`**: Associative table linking students to watched courses (Many-to-Many / N:M Relationship).
 
 ---
+
+## How to test the project?
+
+1. Clone or download this repository.
+2. Open your MySQL client (e.g., MySQL Workbench, DBeaver, or via Terminal).
+3. Import the dump file to create the database and populate the tables with records.
+
+---
