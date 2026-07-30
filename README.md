@@ -1,2 +1,3 @@
-# MySQL-course-exercises
-This repository stores my solutions to the database design, table creation, and SQL query exercises developed during the MySQL course by Gustavo Guanabara (Curso em Vídeo).
+# 🗄️ MySQL Database & Queries - Curso em Vídeo (Gustavo Guanabara)
+
+This repository contains the modeling, creation, and resolution of practical query exercises in **MySQL**, utilizing the `cadastro` database developed in the Database course by **Curso em Vídeo** (Prof. Gustavo Guanabara).
