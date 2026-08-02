@@ -14,8 +14,7 @@ select * from gafanhotos where sexo = "M" AND profissao = "Programador";
 
 select * from gafanhotos where sexo = "F" and nacionalidade = "Brasil" and nome like "J%";
 
-# 5)Uma lista com o nome e a nacionalidade de todos os homens que tem "Silva" no nome,
-# não nasceram no Brasil e pesam menos de 100kg.
+# 5)Uma lista com o nome e a nacionalidade de todos os homens que tem "Silva" no nome, não nasceram no Brasil e pesam menos de 100kg.
 
 select nome, nacionalidade, peso from gafanhotos where sexo = "M" and nome like "%Silva%" and nacionalidade <> "Brasil" and peso < "100";
 
