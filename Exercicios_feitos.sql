@@ -32,7 +32,7 @@ select min(peso) from gafanhotos where sexo = "F" and nacionalidade <> "Brasil" 
 
 # 9)Quantas mulheres têm mais de 1,90m de altura?
 
-select count(altura) from gafanhotos where sexo = "F" and altura > "1.90";
+select count(*) from gafanhotos where sexo = "F" and altura > "1.90";
 
 # 10) Uma lista com as profissões dos gafanhotos e seus respectivos quantitativos.
 
@@ -42,14 +42,11 @@ select profissao, count(*) from gafanhotos group by profissao order by profissao
 
 select sexo, count(*) from gafanhotos where nascimento > "2005-01-01" group by sexo;
 
-# 12) Uma lista com os gafanhotos que nasceram fora do Brasil, mostrando o país de
-# origem e o total de pessoas nascidas lá. Só nos interessam os países que tiveram
-# mais de 3 gafanhotos com essa nacionalidade.
+# 12) Uma lista com os gafanhotos que nasceram fora do Brasil, mostrando o país de origem e o total de pessoas nascidas lá. Só nos interessam os países que tiveram mais de 3 gafanhotos com essa nacionalidade.
 
-select nacionalidade, count(*) from gafanhotos where nacionalidade <> "Brasil" group by nacionalidade having count(nacionalidade) >= "3";
+select nacionalidade, count(*) from gafanhotos where nacionalidade <> "Brasil" group by nacionalidade having count(nacionalidade) >= 3;
 
-# 13)Uma lista agrupada pela altura dos gafanhotos, mostrando quantas pessoas pesam
-# mais de 100Kg e que estão acima da média de altura de todos os cadastrados.
+# 13)Uma lista agrupada pela altura dos gafanhotos, mostrando quantas pessoas pesam mais de 100Kg e que estão acima da média de altura de todos os cadastrados.
 
-select altura, count(*) from gafanhotos where peso > "100" group by altura having altura > (select avg(altura) from gafanhotos);
+select altura, count(*) from gafanhotos where peso > 100 group by altura having altura > (select avg(altura) from gafanhotos);
 
