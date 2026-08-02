@@ -21,3 +21,45 @@ The database consists of 3 main tables with Foreign Key (`FOREIGN KEY`) relation
 3. Import the dump file to create the database and populate the tables with records.
 
 ---
+
+## List of Exercise (13 Challenges)
+
+### 01. Exercise 01 Female Students List
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** A list with the names of all female students (gafanhotas).
+  - **Objective:** Select and display all data for female students registered in the `gafanhotos` table.
+  - **Simulated Interface:** Input: no keyboard input; the query is executed directly in MySQL. Output: tabular result in the terminal with all columns from the table, only for rows where `sexo = 'F'`.
+  - **Code Logic:** Application of conditional filtering with the `WHERE` clause to restrict selected records to those where the `sexo` field equals 'F'.
+</details>
+
+### 02. Exercise 02 List of Births Between 2000 and 2015
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** A list with the data of everyone born between 01/01/2000 and 12/31/2015.
+  - **Objective:** List all people (all fields in the table) born between January 1, 2000, and December 31, 2015.
+  - **Simulated Interface:** No keyboard input required. The result displayed in the terminal shows all columns of the `gafanhotos` table for records that match the date filter.
+  - **Code Logic:** Application of a `WHERE` clause using the `BETWEEN` operator on the `nascimento` field, setting the range with dates '2000-01-01' and '2015-12-31', and retrieving all columns using `SELECT *`.
+</details>
+
+### 03. Exercise 03 Male Programmers List
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** A list with the names of all men who are programmers.
+  - **Objective:** List all available data for male individuals whose profession is "Programmer" (the query displays all columns).
+  - **Simulated Interface:** No keyboard input required. The result is displayed in the terminal with all columns of the `gafanhotos` table for records that satisfy both filters.
+  - **Code Logic:** Application of a `WHERE` clause with two conditions combined by the `AND` operator: `sexo = "M"` and `profissao = "Programador"`, and complete projection of all fields using `SELECT *`.
+</details>
+
+### 04. Exercise 04 Brazilian Women With Name Starting With J
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** A list with the data of all women born in Brazil whose names start with "J".
+  - **Objective:** List all information for female individuals of Brazilian nationality whose names start with the letter "J".
+  - **Simulated Interface:** No keyboard input required. The result displays in the terminal all columns of the `gafanhotos` table for records that satisfy all three filters simultaneously.
+  - **Code Logic:** Application of a `WHERE` clause with three conditions combined by `AND`: `sexo = "F"`, `nacionalidade = "Brasil"`, and `nome LIKE "J%"` (searches for names starting with "J"), alongside complete projection using `SELECT *`.
+</details>
