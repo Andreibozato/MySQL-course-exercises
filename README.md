@@ -103,3 +103,23 @@ The database consists of 3 main tables with Foreign Key (`FOREIGN KEY`) relation
   - **Simulated Interface:** No keyboard input required. The result is a single numeric value displayed in the terminal, representing the lowest weight found in this specific group.
   - **Code Logic:** Application of the `MIN()` aggregation function on the peso column, filtering records through a `WHERE` clause with three conditions combined with `AND: sexo = "F"`, `nacionalidade <> "Brasil"`, and `nascimento BETWEEN "1990-01-01" AND "2000-12-31"`.
 </details>
+
+### 10. Exercise 10 Professions And Their Counts
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** A list of the gafanhotos' professions and their respective counts.
+  - **Objective:** Display each distinct profession present in the `gafanhotos` table along with the number of people who practice that profession.
+  - **Simulated Interface:** No keyboard input required. The result in the terminal presents two columns: `profissao` and the total record count for each group, sorted alphabetically by profession.
+  - **Code Logic:** Grouping data with `GROUP BY profissao`, counting rows per group with `COUNT(*)`, and final sorting by `profissao` in ascending order via `ORDER BY profissao`.
+</details>
+
+### 11. Exercise 11 Quantity Of Men And Women Born After 2005
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** How many male and female gafanhotos were born after 01/01/2005?
+  - **Objective:** Count and display, separately, the number of male and female gafanhotos whose birth date is after January 1, 2005.
+  - **Simulated Interface:** No keyboard input is required. The result in the terminal shows two rows (one for each gender present in the filtered group) with the `sexo` column and the corresponding total record count.
+  - **Code Logic:** Application of a filter with `WHERE nascimento > "2005-01-01"`, followed by grouping by gender using `GROUP BY sexo` and counting rows per group with `COUNT(*)`.
+</details>
