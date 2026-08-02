@@ -73,3 +73,23 @@ The database consists of 3 main tables with Foreign Key (`FOREIGN KEY`) relation
   - **Simulated Interface:** No keyboard input required. The result is a terminal listing showing only the `nome`, `nacionalidade`, and `peso` columns for the filtered records.
   - **Code Logic:** Application of a `WHERE` clause with four conditions combined by `AND`: `sexo = "M"`, `nome LIKE "%Silva%"` (partial match), `nacionalidade <> "Brasil"`, and `peso < "100"` (numeric value comparison handled as a string), projecting only the `nome`, `nacionalidade`, and `peso` columns.
 </details>
+
+### 06. Exercise 06 Max Height Of Brazilian Men
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** What is the tallest height among men living in Brazil?
+  - **Objective:** Calculate and display the maximum height value among all records in the `gafanhotos` table whose gender is male and nationality is "Brasil".
+  - **Simulated Interface:** No keyboard input required. The result displayed in the terminal is a single numeric value corresponding to the maximum height found.
+  - **Code Logic:** Application of the `MAX()` aggregation function on the `altura` column, filtering records through a `WHERE` clause with the conditions `sexo = "M"` and `nacionalidade = "Brasil"`.
+</details>
+
+### 07. Exercise 07 Average Weight Of Registered Gafanhotos
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** What is the average weight of the registered gafanhotos?
+  - **Objective:** Calculate and display the arithmetic mean of the weight of all records in the `gafanhotos` table, without any filters.
+  - **Simulated Interface:** No keyboard input is necessary. The result is a single numeric value displayed in the terminal, representing the average weight of the gafanhotos.
+  - **Code Logic:** Application of the `AVG()` aggregation function directly on the `peso` column of the `gafanhotos` table, which scans all rows, sums the weights, and divides by the total number of records.
+</details>
