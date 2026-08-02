@@ -63,3 +63,13 @@ The database consists of 3 main tables with Foreign Key (`FOREIGN KEY`) relation
   - **Simulated Interface:** No keyboard input required. The result displays in the terminal all columns of the `gafanhotos` table for records that satisfy all three filters simultaneously.
   - **Code Logic:** Application of a `WHERE` clause with three conditions combined by `AND`: `sexo = "F"`, `nacionalidade = "Brasil"`, and `nome LIKE "J%"` (searches for names starting with "J"), alongside complete projection using `SELECT *`.
 </details>
+
+### 05. Exercise 05 Men With Silva In Name Non Brazilian And Under 100kg
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** A list with the name and nationality of all men who have "Silva" in their name, were not born in Brazil, and weigh less than 100kg.
+  - **Objective:** Display name, nationality, and weight for records in the `gafanhotos` table that simultaneously satisfy: male gender, containing "Silva" anywhere in the name, nationality other than "Brasil", and weight under 100 kg.
+  - **Simulated Interface:** No keyboard input required. The result is a terminal listing showing only the `nome`, `nacionalidade`, and `peso` columns for the filtered records.
+  - **Code Logic:** Application of a `WHERE` clause with four conditions combined by `AND`: `sexo = "M"`, `nome LIKE "%Silva%"` (partial match), `nacionalidade <> "Brasil"`, and `peso < "100"` (numeric value comparison handled as a string), projecting only the `nome`, `nacionalidade`, and `peso` columns.
+</details>
