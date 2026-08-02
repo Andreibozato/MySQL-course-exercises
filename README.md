@@ -104,6 +104,16 @@ The database consists of 3 main tables with Foreign Key (`FOREIGN KEY`) relation
   - **Code Logic:** Application of the `MIN()` aggregation function on the peso column, filtering records through a `WHERE` clause with three conditions combined with `AND: sexo = "F"`, `nacionalidade <> "Brasil"`, and `nascimento BETWEEN "1990-01-01" AND "2000-12-31"`.
 </details>
 
+### 09. Exercise 09 Women Taller Than 1.90m
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** How many women are taller than 1.90m?
+  - **Objective:** Count the total number of records in the `gafanhotos` table that are female and have a height greater than 1.90 meters.
+  - **Simulated Interface:** No keyboard input is required. The result is a single integer displayed in the terminal, representing the number of women who meet this condition.
+  - **Code Logic:** Application of the `COUNT(*)` aggregation function after filtering the rows with the `WHERE` clause, imposing two conditions combined with `AND`: `sexo = "F"` and `altura > "1.90"`.
+</details>
+
 ### 10. Exercise 10 Professions And Their Counts
 <details>
   <summary><b>Click to expand project details</b></summary>
@@ -122,4 +132,24 @@ The database consists of 3 main tables with Foreign Key (`FOREIGN KEY`) relation
   - **Objective:** Count and display, separately, the number of male and female gafanhotos whose birth date is after January 1, 2005.
   - **Simulated Interface:** No keyboard input is required. The result in the terminal shows two rows (one for each gender present in the filtered group) with the `sexo` column and the corresponding total record count.
   - **Code Logic:** Application of a filter with `WHERE nascimento > "2005-01-01"`, followed by grouping by gender using `GROUP BY sexo` and counting rows per group with `COUNT(*)`.
+</details>
+
+### 12. Exercise 12 Countries With More Than 3 Gafanhotos Born Outside Brazil
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** A list of gafanhotos born outside of Brazil, showing the country of origin and the total number of people born there. We are only interested in countries that had more than 3 gafanhotos with that nationality.
+  - **Objective:** Display each nationality other than "Brasil" and the respective quantity of gafanhotos, only for those countries where the number of born gafanhotos is greater than or equal to 3.
+  - **Simulated Interface:** No keyboard input required. The result in the terminal shows two columns: `nacionalidade` (country of origin) and the total counted records, only for the groups that satisfy the quantity condition.
+  - **Code Logic:** Initial filtering with `WHERE nacionalidade <> "Brasil"`, grouping by `nacionalidade` with `GROUP BY`, and restricting the groups using `HAVING COUNT(nacionalidade) >= 3`, then displaying the nationality and the person count per country.
+</details>
+
+### 13. Exercise 13 Heights Above Average With Weight Greater Than 100Kg
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** A list grouped by the gafanhotos' height, showing how many people weigh more than 100kg and are above the average height of all registered individuals.
+  - **Objective:** For each height value that is higher than the general average height of all gafanhotos, count how many people with that height weigh more than 100 kg and display this information.
+  - **Simulated Interface:** No keyboard input required. The result in the terminal presents two columns: `altura` (distinct height value that meets the criteria) and the number of gafanhotos (`count(*)`) corresponding to that specific height, having a weight above 100 kg and a height above the general average.
+  - **Code Logic:** Initial filter with `WHERE peso > 100`, grouping by height (`GROUP BY altura`), and restricting groups with `HAVING altura > (subquery)`, where the subquery `(SELECT AVG(altura) FROM gafanhotos)` calculates the average height of all table records. Thus, only height groups that exceed this average are displayed, along with the count of gafanhotos satisfying the weight filter.
 </details>
