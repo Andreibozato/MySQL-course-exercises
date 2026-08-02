@@ -93,3 +93,13 @@ The database consists of 3 main tables with Foreign Key (`FOREIGN KEY`) relation
   - **Simulated Interface:** No keyboard input is necessary. The result is a single numeric value displayed in the terminal, representing the average weight of the gafanhotos.
   - **Code Logic:** Application of the `AVG()` aggregation function directly on the `peso` column of the `gafanhotos` table, which scans all rows, sums the weights, and divides by the total number of records.
 </details>
+
+### 08. Exercise 08 Lowest Weight Among Non Brazilian Women 1990 2000
+<details>
+  <summary><b>Click to expand project details</b></summary>
+  
+  - **Task:** What is the lowest weight among women who were born outside of Brazil and between 01/01/1990 and 12/31/2000?
+  - **Objective:** Find and display the minimum weight value among all records in the gafanhotos table that simultaneously satisfy: female gender, nationality other than "Brasil", and birth date between January 1, 1990, and December 31, 2000.
+  - **Simulated Interface:** No keyboard input required. The result is a single numeric value displayed in the terminal, representing the lowest weight found in this specific group.
+  - **Code Logic:** Application of the `MIN()` aggregation function on the peso column, filtering records through a `WHERE` clause with three conditions combined with `AND: sexo = "F"`, `nacionalidade <> "Brasil"`, and `nascimento BETWEEN "1990-01-01" AND "2000-12-31"`.
+</details>
